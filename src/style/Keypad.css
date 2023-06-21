@@ -1,0 +1,47 @@
+.keypad{
+    flex: 1.4;
+    display: flex;
+    overflow: hidden;
+}
+
+button{
+    all: unset;
+}
+
+.keys{
+    flex: 8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 26px; 
+    font-weight: bold;
+    gap: 25px;
+}
+
+.keys button{
+    display: grid;
+    place-content: center;
+    width: 50px;
+    cursor: pointer;
+}
+
+.keys p:active{
+    transform: scale(0.95);
+    background: rgba(0, 0, 0, 0.14);
+}
+
+.symbols{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.symbols p:active{
+    transform: scale(1.05);
+}
