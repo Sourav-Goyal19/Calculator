@@ -14,6 +14,7 @@ function App() {
   const [isDark, setIsDark] = useState(false)
   const [expression, setExpression] = useState("0")
   const [result, setResult] = useState("0")
+  const [history, setHistory] = useState([]);
 
   function handleKeypress(keyCode, key) {
     if (!usedKeyCodes.includes(keyCode)) return;
@@ -69,11 +70,12 @@ function App() {
     const result = eval(exp);
     setResult(result.toFixed(3))
   }
+
   return (
     <div className='app' tabIndex={0} onKeyDown={(event) => { handleKeypress(event.keyCode, event.key) }} data-theme={isDark ? "dark" : ''}>
       <div className="calculator">
         <Navbar dark={isDark} setDark={setIsDark} />
-        <Header expression={expression} result={result} />
+        <Header expression={expression} result={result} history={history} />
         <Keypad handleKeypress={handleKeypress} />
       </div>
     </div>
