@@ -2,8 +2,11 @@
     display: flex;
     gap: .9375rem;
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 0px;
+    left: 0px;
+    box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-bottom-right-radius: 15px;
 }
 
 .toggle {

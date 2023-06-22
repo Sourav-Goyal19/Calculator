@@ -12,15 +12,17 @@
 .header_history{
     height: 33.33%;
     font-size: 20px;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 
 .header_expression{
-    display: grid;
-    place-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
     height: 33.33%;
     font-size: 26px;
     color: red;
+    width: 100%;
 }
 
 .header_result{
@@ -28,9 +30,8 @@
     width: 100%;
     display: flex;
     align-items: center;
-    font-size: 34px;
     overflow-x: scroll;
-    text-align: end;
+    font-size: 34px;
     font-weight: bold;
 }
 

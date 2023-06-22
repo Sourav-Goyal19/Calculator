@@ -6,7 +6,8 @@
   box-sizing: border-box;
 }
 
-html,body{
+html,
+body {
   font-family: 'Poppins', sans-serif;
 }
 
@@ -42,20 +43,21 @@ html,body{
   display: flex;
   flex-direction: column;
   background-color: var(--bg-color-2);
+  overflow: hidden;
 }
 
-.header{
+.header {
   color: var(--text-color-1);
 }
 
-.keys{
+.keys {
   color: var(--text-color-1);
 }
 
-.symbols{
+.symbols {
   color: var(--text-color-2);
 }
 
-.symbols button:active{
+.symbols button:active {
   color: red;
 }

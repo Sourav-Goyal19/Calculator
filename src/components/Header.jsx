@@ -2,17 +2,19 @@ import React, { useEffect, useRef, useState } from 'react'
 import '../style/App.css';
 import '../style/Header.css';
 
-export const Header = ({expression,result,history}) => {
-    const historyRef = useRef();
-    useEffect(() => {
-        historyRef.current.scrollIntoView({behavior:'smooth'});
-    },[])
+export const Header = ({ expression, result, history }) => {
+    const headerHistoryRef = useRef(null);
+
+  useEffect(() => {
+    // Scroll to the bottom of the header_history element
+    headerHistoryRef.current.scrollTop = headerHistoryRef.current.scrollHeight;
+  }, [history]);
     return (
         <div className='header'>
-            <div ref={historyRef} className="header_history custom-scroll">
+            <div ref={headerHistoryRef} className="header_history custom-scroll">
                 {history.map((item, index) => {
                     return (
-                        <p key={index} className="header_history_item">{item}</p>
+                        <p style={{textAlign:'end'}} key={index} className="header_history_item">{item}</p>
                     )
                 })}
             </div>
